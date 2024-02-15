@@ -1,10 +1,18 @@
-// Aula Prática 10 - Teclado Matricial
+/**
+ * @file Aula_Pratica_10_Q1.ino
+ * @brief Aula Prática 10 - Utilizando um teclado matricial 4x4 e um display LCD 16x2
+ * @version 1.0
+ * @date 2023-06-04
+ *
+ * A. O roteiro envolve o desenvolvimento de uma lógica em que um teclado matricial 4x4 é utilizado para entrada de dados.
+ * B. As teclas pressionadas devem ser mostradas em um display LCD 16x2.
+ */
 
-#include <Adafruit_LiquidCrystal.h>
+#include <LiquidCrystal.h>
 #include <Keypad.h>
 
-// Inicializa o display com o endereço I2C do LCD
-Adafruit_LiquidCrystal lcd(0);
+// Inicializa o display com os pinos do Arduino
+LiquidCrystal lcd(13, 12, 11, 10, 9, 8);
 
 const byte numLinhas = 4;  // número de linhas do teclado
 const byte numColunas = 4; // número de colunas do teclado
